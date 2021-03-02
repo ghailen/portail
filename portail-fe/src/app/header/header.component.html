@@ -1,0 +1,42 @@
+<header role="banner" #demo_navbar id="demo_navbar" class="fixed-top  minimized" >
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg"
+        style="height: 4.5rem; padding-top:0; padding-bottom:0; width:100%; top:0;  position:fixed">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="width: 8rem">
+                <img [src]="'../assets/'+iconPath" alt="Back to homepage" title="Back to homepage"
+                    style="width:50%; height:60%; margin-left:50px;" />
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsing-navbar2"
+                aria-controls="collapsing-navbar2" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse justify-content-between collapse" id="collapsing-navbar2"
+                style="margin-bottom: 0.7rem">
+                <ul class="navbar-nav">
+                    <li *ngFor="let item of items" class="nav-item dropdown">
+
+                        <a *ngIf="item.subItems!=null" class="nav-link dropdown-toggle" href="" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false" routerLinkActive="active" aria-current="page">
+                            {{item.name}}
+                            <span class="sr-only">{{ item.label }}</span>
+                        </a>
+                        <div *ngIf="item.subItems!=null" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a *ngFor="let subItem of item.subItems" class="dropdown-item" [routerLink]="subItem.link"
+                                routerLinkActive="active">
+                                {{subItem.name}}
+                            </a>
+                            <!-- <div class="dropdown-divider"></div> -->
+                        </div>
+                        <a *ngIf="item.subItems==null" class="nav-link" [routerLink]="item.link"
+                            routerLinkActive="active" aria-current="page">
+                            {{item.name}}
+                            <span class="sr-only">{{ item.label }}</span>
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

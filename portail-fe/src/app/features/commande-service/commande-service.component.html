@@ -1,0 +1,361 @@
+<br>
+<br><br><br>
+<div class="container">
+  <h3>{{name}}</h3>
+  <div>solution d'échange de fichier en PESIT, la création est unidirectionnelle , si flux etour attendu une nouvelle
+    commande doit etre passée par votre partenaire </div>
+
+  <br>
+
+  
+  <!--information general-->
+  <div class="col-sm-12">
+    <div class="accordion">
+      <div class="card multi">
+        <div class="card-header" id="headingOne">
+          <h2 class="mb-0">
+
+            <button class="btn btn-link" type="button" data-target="#collapseGeneral" data-toggle="collapse"
+              aria-expanded="false" aria-controls="collapseGeneral">
+              Information generale de la commande
+            </button>
+          </h2>
+        </div>
+        <div id="collapseGeneral" class="collapse show" aria-labelledby="headingOne">
+          <div class="card-body">
+            <div class="form-row">
+              <div class="col">
+                <label for="commandName"> Nom de la commande: </label>
+              </div>
+              <div class="col">
+                <input id="infoGeneral" [(ngModel)]="commandName" class="form-control form-control-sm" type="text"
+                  [readonly]="isReadOnly" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col">
+                <label for="projectMEP"> Projet de MEP: </label>
+              </div>
+              <div class="col">
+                <input id="infoGeneral" [(ngModel)]="projectMEP" class="form-control form-control-sm" type="text"
+                  [readonly]="isReadOnly" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col">
+                <label for="project"> Si vous ne disposez pas de projet de MEP ,saisissez le code BASICAT de votre
+                  application: </label>
+              </div>
+              <div class="col">
+                <input id="infoGeneral" [(ngModel)]="project" class="form-control form-control-sm" type="text"
+                  [readonly]="isReadOnly">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="col">
+                <label for="environnement">Environnement: </label>
+              </div>
+              <div class="col">
+
+                <select id="infoGeneral" class="form-control form-control-sm" [(ngModel)]="environnement">
+                  <option value="aucun">Aucun</option>
+                </select>
+
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="col">
+                <label for="usageEnvironnement">Usage de l'environnement : </label>
+              </div>
+              <div class="col">
+                <select id="infoGeneral" class="form-control form-control-sm" [(ngModel)]="usageEnvironnement">
+                  <option value="aucun">Aucun</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="col">
+                <label for="domain">Domaine : </label>
+              </div>
+              <div class="col">
+                <select id="infoGeneral" class="form-control form-control-sm" [(ngModel)]="domain">
+                  <option value="aucun">Aucun</option>
+                </select>
+              </div>
+            </div>
+
+          </div>
+          <div> Document communs à la commande</div>
+          <mat-icon class="material-icons " color="warn">cloud_upload</mat-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--part 2 -->
+  <br><br>
+  <div class="col-sm-12">
+    <div class="accordion">
+      <div class="card multi">
+        <div class="card-header" id="headingOne">
+          <h2 class="mb-0">
+
+            <button class="btn btn-link" type="button" data-target="#collapseApp" data-toggle="collapse"
+              aria-expanded="false" aria-controls="collapseApp">
+              Application Emettrice
+            </button>
+          </h2>
+        </div>
+        <div id="collapseApp" class="collapse" aria-labelledby="headingOne">
+          <div class="card-body">
+            <div class="form-row">
+              <div class="col">
+                <label for="commandName"> je représente un partenaire externe: </label>
+              </div>
+              <div class="col">
+                <input type="radio" [(ngModel)]="partenaire" value="True" id="yes"> <label for="yes">&nbsp; Oui</label>
+                &nbsp;<input type="radio" [(ngModel)]="partenaire" value="False" id="no"> <label for="no">&nbsp;
+                  Non</label>
+
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col">
+                <label for="projectMEP"> Nom de l'application: </label>
+              </div>
+              <div class="col">
+                <input id="infoGeneral" [(ngModel)]="projectMEP" class="form-control form-control-sm" type="text"
+                  [readonly]="isReadOnly">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col">
+                <label for="project"> E-mail contact </label>
+              </div>
+              <div class="col">
+                <input id="infoGeneral" [(ngModel)]="project" class="form-control form-control-sm" type="text"
+                  [readonly]="isReadOnly">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="col">
+                <label for="environnement">Code Basicat: </label>
+              </div>
+              <div class="col">
+                <input id="infoGeneral" [(ngModel)]="codeBasicat" class="form-control form-control-sm" type="text">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="col">
+                <label for="usageEnvironnement">FtCaroNumber : </label>
+              </div>
+              <div class="col">
+                <input id="infoGeneral" [(ngModel)]="FtCartoNumber" class="form-control form-control-sm" type="text">
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--part 3 -->
+  <br><br>
+  <div class="col-sm-12">
+    <div class="accordion">
+      <div class="card multi">
+        <div class="card-header" id="headingOne">
+          <h2 class="mb-0">
+
+            <button class="btn btn-link" type="button" data-target="#collapseAppData" data-toggle="collapse"
+              aria-expanded="false" aria-controls="collapseAppData">
+              Application Réceptrice
+            </button>
+          </h2>
+        </div>
+        <div id="collapseAppData" class="collapse" aria-labelledby="headingOne">
+          <div class="card-body">
+            <div class="form-row">
+              <div class="col">
+                <label for="partenaireExterne"> je représente un partenaire externe: </label>
+              </div>
+              <div class="col">
+                <input type="radio" [(ngModel)]="partenaireExterne" value="True" id="yes"> <label for="yes">&nbsp;
+                  Oui</label>
+                &nbsp;<input type="radio" [(ngModel)]="partenaireExterne" value="False" id="no"> <label for="no">&nbsp;
+                  Non</label>
+
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col">
+                <label for="emettreApplication"> je veux émettre vers l'application: </label>
+              </div>
+              <div class="col">
+                <input id="infoGeneral" [(ngModel)]="emettreApplication" class="form-control form-control-sm"
+                  type="text" [readonly]="isReadOnly">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col">
+                <label for="nomContact"> Nom contact </label>
+              </div>
+              <div class="col">
+                <input id="infoGeneral" [(ngModel)]="nomContact" class="form-control form-control-sm" type="text"
+                  [readonly]="isReadOnly">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="col">
+                <label for="mailContact">e-mail contact: </label>
+              </div>
+              <div class="col">
+                <input id="infoGeneral" [(ngModel)]="mailContact" class="form-control form-control-sm" type="text">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+
+
+  <!--Serveur Emetteur -->
+
+  <div class="col-sm-12">
+    <div class="accordion">
+      <div class="card multi">
+        <div class="card-header" id="headingOne">
+          <h2 class="mb-0">
+
+            <button class="btn btn-link" type="button" data-target="#collapseServeur" data-toggle="collapse" aria-expanded="false" aria-controls="collapseServeur">
+              Serveur Emetteur
+            </button>
+          </h2>
+        </div>
+        <div id="collapseServeur" class="collapse" aria-labelledby="headingOne" >
+          <div class="card-body">
+            <div class="form-row">
+              <div class="col">
+                <label for="protocole">Protocole : </label>
+              </div>
+              <div class="col">
+                <select id="infoGeneral" class="form-control form-control-sm" [(ngModel)]="protocole">
+                  <option value="aucun">PESIT</option>
+                </select>
+              </div>
+            </div>
+
+
+            <div class="form-row">
+              <div class="col">
+                <label for="newServer"> Nouveau serveur: </label>
+              </div>
+              <div class="col">
+                <input type="radio" [(ngModel)]="newServer" value="True" id="yes"> <label for="yes">&nbsp; Oui</label>
+                &nbsp;<input type="radio" [(ngModel)]="newServer" value="False" id="no"> <label for="no">&nbsp;
+                  Non</label>
+              </div>
+
+            </div>
+            <div class="alert alert-info" role="alert" style="height: 45%">
+              <a href="#" class="alert-link">La prochaine version de l'offre prendra en compte les 2 protocoles :
+                PESIT/SFTP (push)</a>
+            </div>
+            <div class="form-row">
+              <div class="col">
+                <label for="choiceServer"> Choix de serveur: </label>
+              </div>
+              <div class="col">
+                <select id="infoGeneral" class="form-control form-control-sm" [(ngModel)]="choiceServer">
+                  <option value="aucun">--Aucun--</option>
+                  <option value="aucun">DMTIG002</option>
+                  <option value="aucun">DMTIG006</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="col">
+                <label for="descriptionServer"> Description de serveur</label>
+              </div>
+              <div class="col">
+                <input id="infoGeneral" [(ngModel)]="descriptionServer" class="form-control form-control-sm" type="text"
+                  [readonly]="isReadOnly">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="col">
+                <label for="reseauSupport"> Réseau Support</label>
+              </div>
+              <div class="col">
+                <input id="infoGeneral" [(ngModel)]="reseauSupport" class="form-control form-control-sm" type="text"
+                  [readonly]="isReadOnly">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="col">
+                <label for="nbrIp"> Nombre d'IP</label>
+              </div>
+              <div class="col">
+                <input id="infoGeneral" [(ngModel)]="nbrIp" class="form-control form-control-sm" type="text"
+                  [readonly]="isReadOnly">
+              </div>
+            </div>
+
+
+            <div class="form-row">
+              <div class="col">
+                <label for="ip">IP</label>
+              </div>
+              <div class="col">
+                <input id="infoGeneral" [(ngModel)]="ip" class="form-control form-control-sm" type="text"
+                  [readonly]="isReadOnly">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="col">
+                <label for="password">Mot de passe</label>
+              </div>
+              <div class="col">
+                <input id="infoGeneral" [(ngModel)]="password" class="form-control form-control-sm" type="text"
+                  [readonly]="isReadOnly">
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+<div class="row">
+  <div class="col-md-5"></div>
+  <div class="col-md-5"></div>
+  <div class="col-md-2"><button type="button" [routerLink]="['/dashboard']" class="btn btn-primary" (click)="addCommande()">valider la saisie</button>
+  </div>
+</div>
+<br>
+<br><br>
+<br>
+<br>
+<br><br>
+<br>

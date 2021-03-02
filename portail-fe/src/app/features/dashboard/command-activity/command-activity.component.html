@@ -1,0 +1,8 @@
+<div class="card" style="max-width: 100%;">
+  <div class="card-header">
+      <mat-icon class="material-icons color_orange" color="warn" >add_shopping_cart</mat-icon> &nbsp; &nbsp; Commander 
+  </div>
+  <ul class="list-group list-group-flush" *ngFor="let offre of listOffreData ">
+    <li class="list-group-item right-arrow"> <a routerLink="{{offre.typeUrl}}/{{offre.typeId}}/{{offre.typeName}}"> {{offre.typeName}}</a> </li>
+  </ul>
+</div>

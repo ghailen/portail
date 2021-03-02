@@ -1,0 +1,11 @@
+<div class="card" style="width: 100%;">
+  <div class="card-header">
+      <mat-icon class="material-icons color_orange" color="warn" >notification_important</mat-icon> &nbsp; &nbsp; Mes alertes
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item right-arrow"><a routerLink="/alerts/aValider" >Commandes à valider<mat-icon class="badgePosition" matBadge="{{countCommandeEnAttente}}"  MatBadgeSize="small" ></mat-icon></a></li>
+    <!--<li class="list-group-item right-arrow">pré-requis des produits</li>-->
+    <li class="list-group-item right-arrow"><a routerLink="/alerts/commandeEnEchec" >Commandes en echéc <mat-icon class="badgePosition" matBadge="{{countCommandeEnEchec}}" MatBadgeSize="small"></mat-icon> </a>
+      </li>
+  </ul>
+</div>

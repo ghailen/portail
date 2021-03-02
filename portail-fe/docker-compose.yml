@@ -1,0 +1,14 @@
+version: '3'
+services:
+  portail-fe_master:
+    image: softun-factory-01.sofrecom-tunisie.com:5555/saveit/portail/portail-fe/portail-fe/${ARG_BRANCH}:latest
+    env_file:
+     - .env
+    build:
+      context: ${ARG_CONTEXT}
+      dockerfile: ${ARG_DOCKERFILE}
+      args:
+        ARG_DIST: ${ARG_DIST}
+    container_name: portail-fe_master
+    ports:
+    - ${DEPLOY_PORT}:${ARG_SERVER_PORT}

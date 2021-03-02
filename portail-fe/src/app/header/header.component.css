@@ -1,0 +1,17 @@
+nav {
+    background-color:black !important;
+}
+
+@media (min-width: 980px){
+    .nav-link {
+        display: inline !important;
+    }  
+}
+.nav-link, .navbar-brand {
+    border-bottom: 0px  !important;
+    outline: none !important;
+}
+
+.navbar-nav .dropdown-menu{
+    left: 1rem;
+}

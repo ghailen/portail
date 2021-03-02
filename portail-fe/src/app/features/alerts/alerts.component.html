@@ -1,0 +1,53 @@
+<br><br><br><br><br>
+<div *ngIf="name=='aValider'">
+  <table class="table data"  >
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">Nom</th>
+      <th scope="col">Description</th>
+      <th scope="col">Status</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody *ngIf="commande!='' else vide" >
+      <tr *ngFor="let valCommande of commandeEnAttente;let i = index ">  
+          <td>{{valCommande.name}}</td>
+          <td>{{valCommande.description}}</td>
+          <td>{{valCommande.status}}</td>
+          <td><button type="button" class="btn btn-primary" (click)="updateStatusCommande(valCommande.commandeId,i)">Valider</button> &nbsp;&nbsp; <button type="button" class="btn btn-primary" (click)="deleteCommande(valCommande.commandeId,i)">Supprimer</button></td>
+        </tr>  
+  </tbody>
+</table>
+</div>
+
+
+<div *ngIf="name=='commandeEnEchec'">
+<table class="table data"  >
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">Nom</th>
+        <th scope="col">Description</th>
+        <th scope="col">Status</th>
+       
+      </tr>
+    </thead>
+    <tbody *ngIf="commande!='' else vide" >
+        <tr *ngFor="let valCommande of commandeEnEchec;let i = index ">  
+            <td>{{valCommande.name}}</td>
+            <td>{{valCommande.description}}</td>
+            <td>{{valCommande.status}}</td>
+          </tr>  
+    </tbody>
+  </table>
+</div>
+
+  <ng-template #vide>
+      <tbody><tr>  
+          <td>--</td>
+          <td>--</td>
+          <td>--</td>
+          <td>--</td>
+        </tr>
+      </tbody>
+  </ng-template>
+  

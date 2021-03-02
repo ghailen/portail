@@ -1,0 +1,14 @@
+
+<br><br><br><br><div class="container"> 
+<h3>{{name}}</h3>
+<div>Vous pouvez commander ici des élémenets d'infrastructure indépendament d'un projet de MEP </div>
+
+<br>
+
+<div  class="list-group"  >
+    <a href="#" class="list-group-item active">
+      Elements
+    </a>
+    <a href="#" *ngFor="let offre of offreData" routerLink="/commande/{{offre.name}}/{{offre.serviceId}}" class="list-group-item"><mat-icon class="material-icons size">{{offre.icon}}</mat-icon> &nbsp;&nbsp;&nbsp;&nbsp; {{offre.name}} <!--<br> <p class="right-arrow">aperçu</p>--></a> 
+    </div>
+</div>

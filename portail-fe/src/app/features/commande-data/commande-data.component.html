@@ -1,0 +1,25 @@
+<table class="table data"  >
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">Nom</th>
+        <th scope="col">Description</th>    
+      </tr>
+    </thead>
+    <tbody *ngIf="commandeOne!='' else vide" >
+        <tr *ngFor="let valCommande of commandeOne;let i = index ">  
+            <td>{{valCommande.name}}</td>
+            <td>{{valCommande.description}}</td>
+              </tr>  
+    </tbody>
+  </table>
+
+
+  <ng-template #vide>
+      <tbody><tr>  
+          <td>--</td>
+          <td>--</td>
+          <td>--</td>
+          <td>--</td>
+        </tr>
+      </tbody>
+  </ng-template>

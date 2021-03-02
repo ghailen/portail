@@ -1,0 +1,8 @@
+<div id="news" class="card" style="width: 100%;">
+    <div class="card-header">
+      Nouvelles  <a id="exp" routerLink="/feedback"> <mat-icon id="icon" color="#FFA500" >update</mat-icon> &nbsp; Exprimez vous !</a>
+    </div>
+    <ul class="list-group list-group-flush" *ngFor="let n of newsData">
+      <li class="list-group-item right-arrow">{{n.newsDate| date}} : {{n.description}} </li>
+    </ul>
+  </div>

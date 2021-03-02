@@ -1,0 +1,12 @@
+<div class="card" style="width: 100%;">
+  <div class="card-header" >
+      <mat-icon class="material-icons color_orange" color="warn" >event_note</mat-icon> &nbsp; &nbsp; Mes rapports
+  </div>
+  <ul class="list-group list-group-flush" *ngFor="let reports of reportList ">
+    <li class="list-group-item right-arrow" > <a class="pt" (click)="downloadPDF()"> {{reports.name}} </a></li>
+  </ul>
+</div>
+<span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+
+
+

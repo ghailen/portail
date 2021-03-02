@@ -1,0 +1,36 @@
+<br><br><br><br>
+<div class="container mb-3">
+  <div class="col-sm-12">
+
+    <!-- feedback -->
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="card border-dark">
+          <div class="card-header">
+            Feedback
+          </div>
+          <div class="card-body text-dark">
+
+            <div class="row">
+              <div>
+                <label>
+                  Commentaire:
+                  <input type="text" [formControl]="description" size="50">
+                </label>
+              </div>
+             
+            </div>
+            <div>
+                <button type="button" class="btn btn-outline-secondary btn-sm " (click)="addFeedback()">Envoyer le feedback</button>
+
+              </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
